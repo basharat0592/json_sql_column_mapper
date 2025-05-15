@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ### Run the app
 
 ```bash
-streamlit run app.py
+streamlit run json_sql_mapper.py
 ```
 
 ### Usage
