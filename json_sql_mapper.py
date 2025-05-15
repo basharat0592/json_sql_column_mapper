@@ -69,18 +69,30 @@ st.sidebar.code("""CREATE TABLE Customers (
     last_name VARCHAR(50),
     email_address VARCHAR(100),
     signup_date DATE,
-    is_active BIT
+    is_active BIT,
+    loyalty_points INT,
+    referrer_code VARCHAR(50),
+    profile_picture_url TEXT,
+    marketing_opt_in BOOLEAN,
+    birth_date DATE
 );""", language="sql")
 
 st.sidebar.markdown("### 📦 Sample JSON")
 st.sidebar.code("""{
-  "CustomerId": 123,
-  "FirstName": "John",
-  "LastName": "Doe",
-  "Email": "john.doe@example.com",
-  "JoinDate": "2023-01-01",
-  "enabled": true
-}""", language="json")
+  "CustomerId": 789,                  
+  "FirstName": "Alice",                 
+  "LastName": "Smith",                  
+  "Email": "alice.smith@example.com",   
+  "JoinDate": "2022-11-11",            
+  "enabled": false,                    
+  "Points": 1200,                       
+  "Referral": "ABC123",                
+  "Avatar": "https://example.com/img",  
+  "AgreeToMarketing": true,            
+  "DOB": "1995-05-15",                  
+  "Region": "North America"            
+}
+""", language="json")
 
 # --- Main App ---
 st.title("🔄 JSON → SQL Column Mapper")
