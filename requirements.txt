@@ -1,0 +1,6 @@
+streamlit
+sqlparse
+pandas
+rapidfuzz
+sentence-transformers
+torch
